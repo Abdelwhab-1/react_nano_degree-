@@ -15,7 +15,7 @@ export default function Home(props) {
   })
     return (
         <div className="list-books">
-          {props.shelfs.map(shelf => <Shelf shelf={shelf} handleUpdate={props.handelUpdate} books={props.books} ></Shelf>)}
+          {props.shelfs.map(shelf => <Shelf shelf={shelf} handleUpdate={props.handelUpdate} books={props.books} key={props.shelfs.indexOf(shelf)}></Shelf>)}
         </div>
     );
   }
